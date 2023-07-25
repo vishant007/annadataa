@@ -1,0 +1,101 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Home</title>
+		<meta charset="UTF-8" />
+		<meta
+			name="viewport"
+			content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+		/>
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.10.2/css/all.css"
+		/>
+		<link rel="stylesheet" href="{% static 'annadataa/CSS/index.css' %}" />
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<style>
+			body {
+				background-image: url("{% static 'annadataa/img/cover.jpg' %}");
+				background-size: cover;
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+				max-width: 100%;
+				height: 100vh;
+			}
+
+			@media screen and (max-width: 768px) {
+				body {
+					background-position: center center;
+				}
+			}
+
+			@media screen and (max-width: 480px) {
+				body {
+					background-position: left;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- partial:index.partial.html -->
+
+		<nav class="navbar navbar-expand-custom navbar-mainbg">
+			<a class="navbar-brand navbar-logo" href="#">Navbar</a>
+			<button
+				class="navbar-toggler"
+				type="button"
+				aria-controls="navbarSupportedContent"
+				aria-expanded="false"
+				aria-label="Toggle navigation"
+			>
+				<i class="fas fa-bars text-white"></i>
+			</button>
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+				<ul class="navbar-nav ml-auto">
+					<div class="hori-selector">
+						<div class="left"></div>
+						<div class="right"></div>
+					</div>
+					<li class="nav-item active">
+						<a class="nav-link" href=""
+							><i class="fas fa-tachometer-alt"></i>Dashboard</a
+						>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="javascript:void(0);"
+							><i class="far fa-address-book"></i>Crop Predictor</a
+						>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="{% url 'ngo' %}"
+							><i class="far fa-clone"></i>NGOs</a
+						>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="javascript:void(0);"
+							><i class="far fa-calendar-alt"></i>Map View</a
+						>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="javascript:void(0);"
+							><i class="far fa-chart-bar"></i>Contact Us</a
+						>
+					</li>
+				</ul>
+			</div>
+		</nav>
+		<!-- partial -->
+		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.min.js"></script>
+		<script src="{% static 'annadataa/JS/navbar.js' %}"></script>
+	</body>
+</html>
