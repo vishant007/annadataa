@@ -599,7 +599,7 @@
 						>
 					</li>
 					<li class="nav-item">
-						<a class="nav-link" href="{% url 'ngo' %}"
+						<a class="nav-link" href="{% url 'ngo' %}" target="_blank"
 							><i class="far fa-clone"></i>NGOs</a
 						>
 					</li>
@@ -617,10 +617,10 @@
 			</div>
 		</nav>
 		<div class="top" id="home">
-			<div id="google_translate_element"></div>
-			<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 			<div class="top-info">
 				<h1>ANNADATTA</h1>
+				<div id="google_translate_element"></div>
+				<script src="//translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script>
 				<h3>
 					<p
 						class="typewrite"
@@ -639,7 +639,7 @@
 			<div class="card">
 				<img
 					src="{% static 'annadataa/img/ngo2.jpg' %}"
-					width="300"
+					width="100%"
 					height="200"
 				/>
 				<div class="card__text-column">
@@ -648,17 +648,14 @@
 						Get access to NGOs for each state that can help farmers to grow
 						better crops
 					</p>
-					<a
-						href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio"
-						>Read all about it</a
-					>
+					<a href="{% url 'ngo' %}" target="_blank">Read all about it</a>
 				</div>
 			</div>
 
 			<div class="card">
 				<img
 					src="{% static 'annadataa/img/crop-prediction.png' %}"
-					width="300"
+					width="100%"
 					height="200"
 				/>
 				<div class="card__text-column">
@@ -667,17 +664,14 @@
 						Let us decide which crop is most productive and best for you
 						according to climate and soil type
 					</p>
-					<a
-						href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio"
-						>Read all about it</a
-					>
+					<a href="http://127.0.0.1:5000" target="_blank">Read all about it</a>
 				</div>
 			</div>
 
 			<div class="card">
 				<img
 					src="{% static 'annadataa/img/chatbot.jpg' %}"
-					width="300"
+					width="100%"
 					height="200"
 				/>
 				<div class="card__text-column">
@@ -686,22 +680,6 @@
 						Talk with our chatbot in your local language for any farming related
 						query
 					</p>
-					<a
-						href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio"
-						>Read all about it</a
-					>
-				</div>
-			</div>
-
-			<div class="card">
-				<img
-					src="{% static 'annadataa/img/contact.png' %}"
-					width="300"
-					height="200"
-				/>
-				<div class="card__text-column">
-					<h2>Contact us</h2>
-					<p>Get in touch with us directly.</p>
 					<a
 						href="https://developer.mozilla.org/en-US/docs/Web/CSS/aspect-ratio"
 						>Read all about it</a
@@ -861,6 +839,87 @@
 				</ul>
 			</div>
 		</div>
+		<h2 id="contact">Get In Touch</h2>
+		<section class="contact_wrapper body1">
+			<div class="contact_info">
+				<h3 class="title"></h3>
+
+				<ul class="icons_wrapp">
+					<li>
+						<div class="icon">
+							<span class="material-icons-outlined"> mail_outline </span>
+						</div>
+						<div class="text">annadatta@gmail.com</div>
+					</li>
+					<li>
+						<div class="icon">
+							<span class="material-icons-outlined"> phone_in_talk </span>
+						</div>
+						<div class="text">123-456-789</div>
+					</li>
+				</ul>
+			</div>
+
+			<div class="contact_msg">
+				<h3 class="title">Send a Message</h3>
+
+				<form action="mailto:abc@gmail.com" method="post" enctype="text/plain">
+					<div class="form_fild">
+						<div class="input_group w_50">
+							<input type="text" class="input" name="First Name" required />
+							<label class="placeholder abc">First Name</label>
+						</div>
+						<div class="input_group w_50">
+							<input type="text" class="input" name="Last Name" required />
+							<label class="placeholder">Last Name</label>
+						</div>
+						<div class="input_group w_50">
+							<input type="text" class="input" name="Email Address" required />
+							<label class="placeholder">Email Address</label>
+						</div>
+						<div class="input_group w_50">
+							<input type="tel" class="input" name="Mobile Number" required />
+							<label class="placeholder">Mobile Number</label>
+						</div>
+						<div class="input_group w_100">
+							<textarea
+								class="input input_textarea"
+								name="Message"
+								rows="6"
+								required
+							></textarea>
+							<label class="placeholder textarea"
+								>Write your message here...</label
+							>
+						</div>
+					</div>
+					<div class="input_group">
+						<input type="submit" class="btn" value="Send" />
+					</div>
+				</form>
+			</div>
+		</section>
+		<footer>
+			<div class="footer">
+				<div class="row">
+					<a href="#"><i class="fa fa-facebook"></i></a>
+					<a href="#"><i class="fa fa-instagram"></i></a>
+					<a href="#"><i class="fa fa-youtube"></i></a>
+					<a href="#"><i class="fa fa-twitter"></i></a>
+				</div>
+
+				<div class="row">
+					<ul>
+						<li><a href="#home">Home</a></li>
+						<li><a href="#services">Our Services</a></li>
+						<li><a href="#why_choose_us">Why Choose Us</a></li>
+						<li><a href="#contact">Contact Us</a></li>
+					</ul>
+				</div>
+
+				<div class="row">© 2023 ANNADATTA | All rights reserved</div>
+			</div>
+		</footer>
 		<!-- partial -->
 		<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
 		<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js"></script>

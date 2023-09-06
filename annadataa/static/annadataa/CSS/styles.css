@@ -93,6 +93,7 @@ h1 {
 	color: #faf1e4;
 }
 /*----------bootstrap-navbar-css------------*/
+
 .navbar-logo {
 	padding: 15px;
 	color: #fff;
@@ -101,9 +102,11 @@ h1 {
 	background-color: #1d8144;
 	padding: 0px;
 }
+
 #navbarSupportedContent {
 	overflow: hidden;
 	position: relative;
+	width: 100%; /* Set width to 100% to make it full width */
 }
 #navbarSupportedContent ul {
 	padding: 0px;
@@ -257,7 +260,7 @@ h1 {
 	background-repeat: no-repeat;
 	height: 950px;
 	width: 100%;
-	margin-top: -6rem;
+
 	overflow-x: hidden;
 }
 .top-info h1 {
@@ -349,9 +352,7 @@ body {
 	min-height: 100vh;
 	display: flex;
 	flex-direction: column;
-	gap: 2rem;
 	justify-content: center;
-
 	background: hsl(187 40% 98%);
 }
 
