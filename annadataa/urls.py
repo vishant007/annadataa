@@ -4,4 +4,5 @@ from . import views
 urlpatterns = [
     path('', views.home, name='home'),
     path('ngo/', views.ngo, name='ngo'),
+    path('maps/', views.map, name='maps')
 ]

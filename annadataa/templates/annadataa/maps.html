@@ -1,0 +1,89 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Map</title>
+		<script type="text/javascript" src="https://www.google.com/jsapi"></script>
+		<style>
+			body {
+				background-image: url("{% static '/annadataa/img/cover.jpg' %}");
+				background-size: cover;
+				background-attachment: fixed;
+				background-repeat: no-repeat;
+			}
+		</style>
+	</head>
+	<body>
+		<main id="main">
+			<div id="map" align="center">
+				<div class="visualization" id="visualization"></div>
+			</div>
+
+			<script>
+				google.load('visualization', '1', { packages: ['geochart'] });
+				google.setOnLoadCallback(drawVisualization);
+
+				function drawVisualization() {
+					var data = google.visualization.arrayToDataTable([
+						['State Code', 'State', 'Air Quality'],
+						['IN-UP', 'Uttar Pradesh - Wheat, Rice', 780],
+						['IN-BR', 'Bihar - Rice, Maize', 510],
+						['IN-MH', 'Maharashtra - Rice, Sugarcane', 920],
+						['IN-WB', 'West Bengal - Rice, Oil seeds', 510],
+						['IN-MP', 'Madhya Pradesh - Wheat, Soyabean', 700],
+						['IN-TN', 'Tamil Nadu - Rice, sugarcane', 930],
+						['IN-RJ', 'Rajasthan - Wheat, Barley', 1030],
+						['IN-KA', 'Karnataka - Corn, Groundnuts', 1290],
+						['IN-GJ', 'Gujarat - Cotton, Groundnuts', 1304],
+						['IN-AP', 'Andhra Pradesh - Rice, Cotton', 320],
+						['IN-OR', 'Orissa - Jute, Pulses', 133],
+						['IN-TG', 'Telengana - Rice, Maize', 233],
+						['IN-KL', 'Kerela - Coconut, Rubber', 311],
+						['IN-JH', 'Jharkhand - Wheat , Maize', 290],
+						['IN-AS', 'Assam - Tea, Jute', 280],
+						['IN-PB', 'Punjab - Wheat, Rice', 300],
+						['IN-CT', 'Chhatisgarh - Rice, Maize', 330],
+						['IN-HR', 'Haryana - wheat, Rice', 300],
+						['IN-JK', 'Jammu and kashmir - Apple, Saffron', 200],
+						['IN-UK', 'Uttrakhand - Soyabean, Oilseeds', 208],
+						['IN-HP', 'Himachal Pradesh - Sugarcane, Mustard', 107],
+						['IN-TR', 'Tripura - Rice, Pea', 301],
+						['IN-ML', 'Meghalaya - Orange, Pineapple', 210],
+						['IN-MN', 'Manipur - French Beans, Tomatoes', 220],
+						['IN-NL', 'Nagaland - Rice, Corn', 201],
+						['IN-GA', 'Goa - Cashewnuts, Brinjal', 1121],
+						['IN-AP', 'Arnachal pradesh - Potato, Ginger', 343],
+						['IN-MZ', 'Mizoram - Maize, Rice', 423],
+						['IN-SK', 'Sikkim - Wheat. Barley', 724],
+						['IN-PY', 'Puducherry - Rice, Bajra', 233],
+						['IN-CH', 'Chandigarh - Tomatoes, Cucumbers', 230],
+						['IN-AN', 'Andaman and Nicobar Islanda - Coconut, Oil palm', 230],
+						['IN-DN', 'Dadra and Nagar Haveli - Jowar, Sugarcane', 230],
+						['IN-DD', 'Daman and Diu - Mango , Coconut', 229],
+						['IN-LD', 'Lakshdweep - Coconut, Thenga', 231],
+						['IN-DL', 'Delhi - Wheat, tomato', 1300],
+					]);
+
+					var opts = {
+						region: 'IN',
+						domain: 'IN',
+						displayMode: 'regions',
+						colorAxis: { colors: ['#008000', '#FFFF00', '#FF0000'] },
+						resolution: 'provinces',
+						backgroundColor: '#81d4fa',
+						defaultColor: '#f5f5f5',
+						width: 940,
+						height: 680,
+					};
+
+					var geochart = new google.visualization.GeoChart(
+						document.getElementById('visualization')
+					);
+
+					geochart.draw(data, opts);
+				}
+			</script>
+		</main>
+	</body>
+</html>
