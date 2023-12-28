@@ -1081,6 +1081,10 @@ footer {
 	font-size: 0.8em;
 }
 
+.row {
+	justify-content: center;
+}
+
 .footer .row a {
 	text-decoration: none;
 	color: black;
