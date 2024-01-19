@@ -34,6 +34,8 @@ crop_dict = {1: "Rice", 2: "Maize", 3: "Jute", 4: "Cotton", 5: "Coconut", 6: "Pa
              19: "Pigeonpeas", 20: "Kidneybeans", 21: "Chickpea", 22: "Coffee
 ```
 
+## Project Demo: https://github.com/vishant007/annadataa/assets/64253459/f674c78e-74be-4144-b244-4e27eb117f7c
+
 ## Installation Guide:
 
 - Clone the repo into your device.
