@@ -36,4 +36,19 @@ crop_dict = {1: "Rice", 2: "Maize", 3: "Jute", 4: "Cotton", 5: "Coconut", 6: "Pa
 
 ## Installation Guide:
 
+- Clone the repo into your device.
+- Install required dependencies
+- Run the following commands:
 
+```bash
+cd Crops-Recommendation-System-ML-AI
+flask run
+```
+
+- Open new terminal.
+- Run the following command
+
+```bash
+python manage.py runserver
+```
+- Happy Hacking!!
